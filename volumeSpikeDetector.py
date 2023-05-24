@@ -21,7 +21,7 @@ def load_data():
     # load data
     for symbol in symbols:
         try:
-            temp = yf.download(symbol+".NS", start="2023-02-25", end=date.today())
+            temp = yf.download(symbol+".NS", start="2022-02-25", end=date.today())
             temp["Symbol"]=symbol
         # assign bool on spike on comparing with past moving average value
             temp_avg_vol=temp['Volume'].rolling(5).mean()
